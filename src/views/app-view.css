@@ -1,0 +1,149 @@
+body{
+  background-color: #ebe3e7;
+  height: 100vh;
+  width: 100vw;
+  margin: 10px auto;
+  display: grid;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  text-align: center;
+  grid-gap: 10px;
+  grid-template-rows: 5% 70% 5%;
+  grid-template-areas: 'header'
+                       'main'
+                       'footer';
+
+}
+header{
+  grid-area: header;
+}
+.form input {
+  width: 90%;
+  border: 2px solid #dacdd0;
+  padding: 8px;
+  font-size: 1rem;
+}
+.form button {
+  color: #34572a;
+  border: none;
+  background: #dacdd0;
+  cursor: pointer;
+  height: 100%;
+  padding: 12px;
+}
+
+main {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  grid-area: main;
+}
+
+.items {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  cursor: move;
+  height: 100%!important;
+}
+
+.items.active {
+  transform: scale(1.05);
+}
+
+.item {
+  display: inline-grid;
+  background: #dacdd0;
+  width: 22.45%;
+  white-space: normal;
+  height: 100%;
+  border-right: solid 1px #ebe3e7;
+  overflow: hidden;
+  position: relative;
+  grid-template-rows: 40% 6% 7% 30% 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'prev prev'
+                       'name name'
+                       'views ctitle'
+                       'descr descr'
+                       'data data';
+  padding: 15px;
+}
+.prev{
+  grid-area: prev;
+}
+.name{
+  grid-area: name;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.ctitle{
+  grid-area: ctitle;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.descr{
+  grid-area: descr;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.data{
+  grid-area: data;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+.views{
+  grid-area: views;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+a :hover {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+.pageBut{
+  border-radius: 35%;
+  background-color: white;
+  margin: 10px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.color{
+  background-color: #34572a;
+  color:white;
+}
